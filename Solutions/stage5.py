@@ -84,7 +84,7 @@ class Translator:
         headers = {'User-Agent': 'Mozilla/5.0'}
         r = requests.get(self.url, headers=headers)
         if r.status_code == SUCCESS:
-            self.scarp_answer(r)
+            self.scrap_answer(r)
 
     def build_path(self):
         self.path = os.path.join(os.getcwd(), self.word + ".txt")
@@ -112,4 +112,3 @@ if __name__ == '__main__':
 
     translator = Translator()
     translator.start()
-
